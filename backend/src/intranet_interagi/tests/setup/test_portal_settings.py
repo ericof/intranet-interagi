@@ -1,41 +1,28 @@
 """Portal settings tests."""
 from plone import api
 
+import pytest
+
 
 class TestPortalSettings:
     """Test that Portal configuration is correctly done."""
 
-    def test_portal_title(self, portal):
-        """Test portal title."""
-        value = api.portal.get_registry_record("plone.site_title")
-        expected = "Intranet Interagi"
-        assert value == expected
-
-    def test_portal_timezone(self, portal):
-        """Test portal timezone."""
-        value = api.portal.get_registry_record("plone.portal_timezone")
-        expected = "America/Sao_Paulo"
-        assert value == expected
-
-    def test_portal_sitemap(self, portal):
-        """Test portal sitemap."""
-        value = api.portal.get_registry_record("plone.enable_sitemap")
-        assert value is True
-
-    def test_portal_twitter(self, portal):
-        """Test portal twitter."""
-        value = api.portal.get_registry_record("plone.twitter_username")
-        expected = "plone"
-        assert value == expected
-
-    def test_portal_language(self, portal):
-        """Test portal language."""
-        value = api.portal.get_registry_record("plone.default_language")
-        expected = "pt-br"
-        assert value == expected
-
-    def test_portal_smtp_host(self, portal):
+    @pytest.mark.parametrize(
+            "setting,expected",
+            [
+                ["plone.default_language", "pt-br"],
+                ["plone.email_charset", "utf-8"],
+                ["plone.email_from_address", "intranet@interagi.com.br"],
+                ["plone.email_from_name", "Intranet Interagi"],
+                ["plone.enable_sitemap", True],
+                ["plone.portal_timezone", "America/Sao_Paulo"],
+                ["plone.site_title", "Intranet Interagi"],
+                ["plone.smtp_host", "localhost"],
+                ["plone.smtp_port", 25],
+                ["plone.twitter_username", "plone"],
+            ]
+    )
+    def test_portal_settings(self, portal, setting, expected):
         """Test portal smtp_host."""
-        value = api.portal.get_registry_record("plone.smtp_host")
-        expected = "localhost"
+        value = api.portal.get_registry_record(setting)
         assert value == expected
