@@ -1,0 +1,19 @@
+{
+  "portal": [
+    {
+      "email": "ericof@simplesconsultoria.com.br",
+      "properties": {
+        "fullname": "Intranet Interagi",
+        "location": "World"
+      },
+      "groups": [
+      ],
+      "roles": [
+        "Member"
+      ],
+      "username": "intranet-interagi"
+    }
+  ],
+    "team": [
+  ]
+}
