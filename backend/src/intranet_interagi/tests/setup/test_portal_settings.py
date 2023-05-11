@@ -23,6 +23,6 @@ class TestPortalSettings:
             ]
     )
     def test_portal_settings(self, portal, setting, expected):
-        """Test portal smtp_host."""
+        """Test portal settings."""
         value = api.portal.get_registry_record(setting)
-        assert value == expected
+        assert value == expected, f"Valor incorreto para {setting}"
