@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-05-13 14:45+0000\n"
+"POT-Creation-Date: 2023-05-13 14:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,10 +38,6 @@ msgstr "Informações de Contato"
 #: intranet_interagi/content/pessoa.py:14
 msgid "Default"
 msgstr "Padrão"
-
-#: intranet_interagi/vocabularies/predios.py:9
-msgid "Edifício Sede"
-msgstr "Edifício Sede"
 
 #: intranet_interagi/profiles/default/types/Area.xml
 #: intranet_interagi/profiles/default/types/Pessoa.xml
@@ -136,3 +132,8 @@ msgstr "Desinstala as configurações da Intranet Interagi"
 #: intranet_interagi/profiles/default/types/Pessoa.xml
 msgid "View"
 msgstr "Visão"
+
+#. Default: "Edifício Sede"
+#: intranet_interagi/vocabularies/predios.py:9
+msgid "predios-sede"
+msgstr "Edifício Sede"

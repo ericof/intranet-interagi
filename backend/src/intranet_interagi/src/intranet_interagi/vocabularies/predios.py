@@ -6,7 +6,7 @@ from zope.schema.vocabulary import SimpleVocabulary
 
 
 PREDIOS = [
-    ("sede", _("Edifício Sede")),
+    ("sede", _("predios-sede", default="Edifício Sede")),
     ("filial-01", _("Filial 01")),
     ("filial-02", _("Filial 02")),
     ("filial-03", _("Filial 03")),
