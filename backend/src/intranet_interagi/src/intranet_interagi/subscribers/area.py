@@ -19,7 +19,7 @@ def _create_user_groups(obj: Area):
     payload = {
         "groupname": f"{uid}_editors",
         "title": f"Editores para {title}",
-        "description": f"Students for the {title} session",
+        "description": f"Editores para a área {title} ",
     }
     editors = api.group.create(**payload)
     api.group.grant_roles(group=editors, roles=["Editor"], obj=obj)
