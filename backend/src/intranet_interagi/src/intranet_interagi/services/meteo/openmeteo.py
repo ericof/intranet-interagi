@@ -10,7 +10,7 @@ BASE_URL = "https://api.open-meteo.com/v1/forecast"
 
 def time_30m_key(*args, **kwargs):
     """Chave de cache para manter o valor em cache por 30 minutos."""
-    key = time() // (60 * 30)
+    return time() // (60 * 30)
 
 
 def _formatar_resposta(data: dict) -> dict:
