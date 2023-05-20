@@ -58,3 +58,9 @@ response = session.get(BASE_URL)
 data = response.json()
 total_conteudo = data["items_total"]
 logger.info(f"O portal conta com {total_conteudo} itens de conteúdo")
+
+# Salvar os dados recebidos do portal em um arquivo json
+arquivo_dados = PASTA_DADOS / "listagem.json"
+with open(arquivo_dados, "w") as fh:
+    json.dump(data, fh, indent=2)
+    logger.info(f"Dados da listagem salvos em {arquivo_dados}")
