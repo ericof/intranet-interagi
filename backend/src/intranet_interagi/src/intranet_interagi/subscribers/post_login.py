@@ -20,6 +20,11 @@ def login_handler(event):
             # Temos um resultado, então ignoramos o
             # restante do código
             brain = brains[0]
+            # Dá permissão apenas se usuário não a tiver
+            pessoa = brain.getObject()
+            roles = api.user.get_roles(user=user, obj=pessoa)
+            if "Owner" not in roles or "Editor" not in roles:
+                api.user.grant_roles(user=user, obj=pessoa, roles=["Owner", "Editor"])
             logger.info(f"Objeto pessoa existe em {brain.getURL()}")
             return
         email = email if email.endswith("@plone.org") else "dummy@plone.org"
