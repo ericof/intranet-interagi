@@ -28,7 +28,6 @@
     "src/addons/intranet_interagi"
   ],
   "addons": [
-    "@kitconcept/volto-light-theme",
     "intranet_interagi"
   ],
   "theme": "@kitconcept/volto-light-theme",
