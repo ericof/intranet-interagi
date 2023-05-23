@@ -2495,11 +2495,11 @@ __metadata:
   linkType: hard
 
 "@kitconcept/volto-blocks-grid@npm:*":
-  version: 7.0.0
-  resolution: "@kitconcept/volto-blocks-grid@npm:7.0.0"
+  version: 7.0.1
+  resolution: "@kitconcept/volto-blocks-grid@npm:7.0.1"
   peerDependencies:
     "@plone/volto": ">=16.0.0"
-  checksum: 7ab37292fc2c7160c20855b98ee36e990d74e086d5f1aa91a93a6e38f9197fe7f62157f925d69c969787396b9b8558797fbd7604228253f263751bd18266805f
+  checksum: 2aa381d21504091dd1c9bd0b2bf740a1f039a9d0493facecd1f23a7c857d802c8e51641a00f269e5486fec4c2bba2b0422a4601eabffeb3aad37d057c15f00fd
   languageName: node
   linkType: hard
 
@@ -2963,14 +2963,14 @@ __metadata:
   linkType: hard
 
 "@plonegovbr/volto-code-block@npm:*":
-  version: 2.0.0
-  resolution: "@plonegovbr/volto-code-block@npm:2.0.0"
+  version: 2.1.0
+  resolution: "@plonegovbr/volto-code-block@npm:2.1.0"
   dependencies:
     "@plone/scripts": "*"
     prismjs: "*"
   peerDependencies:
     "@plone/volto": ">=15.12.0"
-  checksum: 5025d68e81e74745374a491a873ca57b60d2cebd7322126374b000d0ec87c28cbededcd920ae4ad4de302ef2ff08830c1838d1f8d7101b63fb8da5aa7978806e
+  checksum: 9240955c7342fcdb7b4f0acf5651ad71a0e3ab6e20f560985bafa9c8207d3d5bdc2b296df4d0b96c9a69f80fbd6c934364d5d395e9cb5a373f04e2796c3d69ee
   languageName: node
   linkType: hard
 
@@ -11856,13 +11856,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "frontend@workspace:."
   dependencies:
-    "@eeacms/volto-accordion-block": "*"
-    "@eeacms/volto-matomo": "*"
-    "@kitconcept/volto-blocks-grid": "*"
-    "@kitconcept/volto-slider-block": "*"
     "@plone/scripts": ^2.1.5
     "@plone/volto": 17.0.0-alpha.7
-    "@plonegovbr/volto-code-block": "*"
     "@storybook/addon-actions": ^6.3.0
     "@storybook/addon-controls": 6.3.0
     "@storybook/addon-essentials": ^6.3.0
@@ -13505,6 +13500,19 @@ __metadata:
   checksum: a24fd5763c3aae450d97c4a67d95618d791f7a564996cbf6f1c4c5433c3c6fe0c141d967f94775bf9c0e70ce7791c66854987fa03a99a57f10c96186ddd90658
   languageName: node
   linkType: hard
+
+"intranet_interagi@workspace:src/addons/intranet_interagi":
+  version: 0.0.0-use.local
+  resolution: "intranet_interagi@workspace:src/addons/intranet_interagi"
+  dependencies:
+    "@eeacms/volto-accordion-block": "*"
+    "@eeacms/volto-matomo": "*"
+    "@kitconcept/volto-blocks-grid": "*"
+    "@kitconcept/volto-slider-block": "*"
+    "@plone/scripts": "*"
+    "@plonegovbr/volto-code-block": "*"
+  languageName: unknown
+  linkType: soft
 
 "invariant@npm:^2.1.0, invariant@npm:^2.1.1, invariant@npm:^2.2.3, invariant@npm:^2.2.4":
   version: 2.2.4
