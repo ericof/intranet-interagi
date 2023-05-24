@@ -1,5 +1,6 @@
 from pathlib import Path
 from faker import Faker
+
 import logging
 import requests
 from random import choice
@@ -14,14 +15,15 @@ logger.setLevel(logging.INFO)
 
 # Constantes utilizadas no script
 PASTA_ATUAL = Path(__file__).parent.resolve()
-PASTA_DADOS = PASTA_ATUAL / "data"
-BASE_URL="http://localhost:8080/Plone/++api++"
+
+BASE_URL="http://127.0.0.1/++api++"
 USUARIO="admin"
 SENHA="admin"
 
 # Cabeçalhos HTTP
 headers = {
-    "Accept": "application/json"
+    "Accept": "application/json",
+    "Host": "intranet.localhost"
 }
 
 session = requests.Session()
@@ -32,9 +34,7 @@ login_url = f"{BASE_URL}/@login"
 response = session.post(login_url, json={"login": USUARIO, "password": SENHA})
 data = response.json()
 token = data["token"]
-session.headers.update(
-    {"Authorization": f"Bearer {token}"}
-)
+session.headers.update({"Authorization": f"Bearer {token}"})
 
 # Criar pasta Time
 data = {
@@ -82,17 +82,13 @@ PREDIOS = [
 ]
 
 parent_url = f"{BASE_URL}/time"
-for idx in range(1, 50):
+for idx in range(1, 250):
     area = choice(AREAS)
     data = {
         "id": f"pessoa-{idx:02d}",
         "@type": "Pessoa",
         "title": fake.name(),
-        "area": [
-            {
-                "@id": area,
-            }
-        ],
+        "area": [{"@id": area}, ],
         "ramal": f"1{idx:03d}",
         "email": f"pessoa-{idx:02d}@plone.org",
         "predio": {"token": choice(PREDIOS)}
