@@ -77,7 +77,7 @@ services:
       ## /++api++/
       - traefik.http.routers.rt-backend-api-public.rule=Host(`intranet.localhost`) && PathPrefix(`/++api++`)
       - traefik.http.routers.rt-backend-api-public.entrypoints=http
-      - traefik.http.routers.rt-backend-api-public.service=svc-svc-backend
+      - traefik.http.routers.rt-backend-api-public.service=svc-backend
       - traefik.http.routers.rt-backend-api-public.middlewares=gzip,mw-backend-vhm-api
       ## /ClassicUI/
       - traefik.http.routers.rt-backend-ui-internal.rule=Host(`intranet.localhost`) && PathPrefix(`/ClassicUI`)
