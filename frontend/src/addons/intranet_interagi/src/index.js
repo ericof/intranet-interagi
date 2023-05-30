@@ -22,7 +22,7 @@ const applyConfig = (config) => {
   config.blocks.blocksConfig.respostaBlock = {
     id: 'respostaBlock',
     title: 'Resposta',
-    group: 'text',
+    group: 'intranet',
     icon: exclamationSVG,
     view: RespostaView,
     restricted: false,
@@ -30,6 +30,11 @@ const applyConfig = (config) => {
     sidebarTab: false,
     blockHasOwnFocusManagement: false,
   };
+
+  config.blocks.groupBlocksOrder = [
+    ...config.blocks.groupBlocksOrder,
+    { id: 'intranet', title: 'Intranet' },
+  ];
 
   return config;
 };
